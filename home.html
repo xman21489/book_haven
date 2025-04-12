@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Haven | Home</title>
+    <link rel="stylesheet" href="styles/book.css" />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+      <nav class="navbar">
+        <h1 class="site-title">Book Haven</h1>
+        <ul class="nav-links">
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="categories.html">Types of Books</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="allbooks.html">All Books</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <a href="login.html" class="btn login-btn">Login</a>
+          <a href="sign-up.html" class="btn signup-btn">Sign Up</a>
+        </div>
+        
+ 
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="main-content">
+      <section class="welcome-section">
+        <h2>Welcome to <span class="highlight">Book Haven</span></h2>
+        <p>Your one-stop destination for book lovers, teachers, and students.</p>
+        <a href="categories.html" class="btn explore-btn">Explore Categories</a>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="feature-card">
+          <h3>📚 Huge Collection</h3>
+          <p>Browse through thousands of books across genres, authors, and topics.</p>
+        </div>
+        <div class="feature-card">
+          <h3>👩‍🏫 For Educators & Learners</h3>
+          <p>Access academic texts, teacher resources, and student-friendly reads.</p>
+        </div>
+        <div class="feature-card">
+          <h3>🧡 Built for Book Lovers</h3>
+          <p>Join our reading community and stay updated on new releases and reviews.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-media">
+        <a href="https://www.instagram.com/">Instagram</a>
+        <a href="#">X</a>
+        <a href="#">Telegram</a>
+        <a href="#">YouTube</a>
+        <a href="#">Discord</a>
+        <a href="#">Threads</a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Contact Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    </footer>3
+    <script>
+      const items = ["wimpy", "Banana", "Orange", "Grapes", "Strawberry"];
+      const resultsList = document.getElementById("results");
+      const searchInput = document.getElementById("searchInput");
+  
+      function displayResults(filteredItems) {
+        resultsList.innerHTML = "";
+        filteredItems.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          resultsList.appendChild(li);
+        });
+      }
+  
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        const filtered = items.filter(item => item.toLowerCase().includes(query));
+        displayResults(filtered);
+      });
+  
+      // Initialize with all items
+      
+    </script>
+  
+  </body>
+</html>
+
