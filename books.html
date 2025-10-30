@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Haven | Home</title>
+  <title>Book Haven | Types of Books</title>
   <style>
     * {
       margin: 0;
@@ -77,47 +77,8 @@
       background: rgba(255, 255, 255, 0.4);
     }
 
-    /* Hero Section */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 90vh;
-      color: white;
-      background: rgba(0, 0, 0, 0.55);
-      padding: 2rem;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      color: #ff5e62;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin-bottom: 2rem;
-      color: #f0f0f0;
-    }
-
-    .hero a {
-      background: #0033cc;
-      color: white;
-      padding: 12px 25px;
-      font-size: 1.1rem;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .hero a:hover {
-      background: #ff5e62;
-    }
-
-    /* Featured Books Section */
-    .featured {
+    /* Book Types Section */
+    .book-types-section {
       padding: 3rem 1rem;
       background-color: rgba(255, 255, 255, 0.95);
       margin: 2rem auto;
@@ -127,39 +88,45 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .featured h2 {
+    .book-types-section h2 {
+      font-size: 2rem;
       color: #0033cc;
       margin-bottom: 2rem;
     }
 
-    .featured-grid {
+    .book-types-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
     }
 
-    .book-card {
-      background: white;
+    .book-type-card {
+      background: #fff;
+      padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .book-card:hover {
+    .book-type-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .book-card img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
+    .book-type-card h3 {
+      color: #ff5e62;
+      margin-bottom: 0.5rem;
     }
 
-    .book-card h3 {
-      color: #ff5e62;
-      padding: 1rem;
+    .book-type-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .book-type-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
     }
 
     /* Footer */
@@ -200,9 +167,6 @@
       .auth-buttons {
         flex-direction: column;
       }
-      .hero h1 {
-        font-size: 2.2rem;
-      }
     }
   </style>
 </head>
@@ -213,8 +177,8 @@
     <nav class="navbar">
       <h1 class="site-title">Book Haven</h1>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="books.html">Types of Books</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="categories.html" class="active">Types of Books</a></li>
         <li><a href="contact.html">Contact</a></li>
         
       </ul>
@@ -225,36 +189,54 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to Book Haven</h1>
-    <p>Your ultimate destination for discovering, exploring, and enjoying books from every genre imaginable.</p>
-    
-    <button><a  onclick="showPrompt" href="books.html">📚 Browse Books</a></button>
-  </section>
-
-  <!-- Featured Books -->
-  <section class="featured">
-    <h2>Featured Collections</h2>
-    <div class="featured-grid">
-      <div class="book-card">
-        <img src="https://m.media-amazon.com/images/I/81bsw6fnUiL.jpg" alt="Harry Potter Book Cover">
-        <h3>Fantasy Adventures</h3>
+  <!-- Main Content -->
+  <main>
+    <section class="book-types-section">
+      <h2>Explore Book Categories</h2>
+      <div class="book-types-grid">
+        <div class="book-type-card">
+          <img src="https://media.theeverygirl.com/wp-content/uploads/2022/07/the-everygirl-gallery-non-ficion-books.jpg" alt="Stack of non-fiction books">
+          <h3>📖 Fiction</h3>
+          <p>Immerse yourself in imaginative storytelling and characters.</p>
+        </div>
+        <div class="book-type-card">
+          <img src="https://images.saymedia-content.com/.image/t_share/MTg3OTczMDQ3MTcxNDI2MTk3/best-narrative-nonfiction-books-for-kids.jpg" alt="">
+          <h3>📚 Non-Fiction</h3>
+          <p>Explore real-world facts, memoirs, and biographies.</p>
+        </div>
+        <div class="book-type-card">
+          <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2020/08/b1-17.jpg" alt="">
+          <h3>🕵️ Mystery</h3>
+          <p>Enjoy suspenseful whodunits and gripping crime tales.</p>
+        </div>
+        <div class="book-type-card">
+          <img src="https://nypost.com/wp-content/uploads/sites/2/2021/07/romance-fiction-books.jpg?quality=90&strip=all" alt="">
+          <h3>💘 Romance</h3>
+          <p>Experience stories of love, relationships, and emotions.</p>
+        </div>
+        <div class="book-type-card">
+          <img src="https://api.time.com/wp-content/uploads/2022/02/Sci-fi-books3.jpg" alt="">
+          <h3>🚀 Sci-Fi</h3>
+          <p>Discover futuristic tech, space travel, and alien worlds.</p>
+        </div>
+        <div class="book-type-card">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.PoJkOCVEIeVPuLPCFpZliwHaLG?pid=Api&P=0&h=180" alt="">
+          <h3>🐉 Fantasy</h3>
+          <p>Step into magical realms with mythical creatures and quests.</p>
+        </div>
+        <a href="childrens.html" class="book-type-card">
+          <img src="https://images.huffingtonpost.com/2015-03-12-1426144574-9615797-Childrensbookpicks.jpg" alt="">
+          <h3>👧 Children's</h3>
+          <p>Wholesome and fun reads for growing minds.</p>
+        </a>
+        <div class="book-type-card">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.HT6__zlYef1vKQQjrXA7OQHaE7?pid=Api&P=0&h=180" alt="">
+          <h3>🎓 Academic</h3>
+          <p>Educational books for students and professionals.</p>
+        </div>
       </div>
-      <div class="book-card">
-        <img src="https://m.media-amazon.com/images/I/91uwocAMtSL.jpg" alt="Romance Book Cover">
-        <h3>Heartwarming Romances</h3>
-      </div>
-      <div class="book-card">
-        <img src="https://m.media-amazon.com/images/I/71UwSHSZRnS.jpg" alt="Mystery Book Cover">
-        <h3>Thrilling Mysteries</h3>
-      </div>
-      <div class="book-card">
-        <img src="https://m.media-amazon.com/images/I/81iqZ2HHD-L.jpg" alt="Sci-Fi Book Cover">
-        <h3>Sci-Fi Adventures</h3>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -272,18 +254,6 @@
       <a href="#">Terms & Conditions</a>
     </div>
   </footer>
-<script>
-    function showPrompt() {
-        let userName = prompt("Welcome to Book Haven! What's your name?");
-        if (userName !== null && userName.trim() !== "") {
-            alert("Hello, " + userName + "! Enjoy exploring our book categories.");
-        } else if (userName !== null) {
-            alert("You didn't enter your name!");
-        } else {
-            alert("Prompt cancelled.");
-        }
-    }
-</script>
 
 </body>
 </html>

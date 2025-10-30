@@ -1,71 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/contact.css" />
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Haven | Contact</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background: url('https://wallpaperaccess.com/full/1692819.jpg') no-repeat center center fixed;
+      background-size: cover;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: black;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      font-size: 28px;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      text-decoration: underline;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 15px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background-color: rgba(255, 255, 255, 0.95);
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      color: #0033cc;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .contact-section p {
+      margin-bottom: 2rem;
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: left;
+    }
+
+    label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #0033cc;
+    }
+
+    button {
+      background: #0033cc;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ff5e62;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    .contact-info h3 {
+      color: #0033cc;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info p {
+      color: #555;
+    }
+
+    /* Footer */
+    footer.footer {
+      background: black;
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    .footer-media,
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin: 10px 0;
+    }
+
+    .footer a {
+      color: white;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+      .nav-links,
+      .auth-buttons {
+        flex-direction: column;
+      }
+      .contact-section {
+        margin: 2rem 1rem;
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
     <nav class="navbar">
       <h1 class="site-title">Book Haven</h1>
       <ul class="nav-links">
-        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="home.html">Home</a></li>
         <li><a href="categories.html">Types of Books</a></li>
-        <li><a href="allbooks.html">All Books</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    
       </ul>
       <div class="auth-buttons">
-        <a href="login.html" class="btn login-btn">Login</a>
-        <a href="sign-up.html" class="btn signup-btn">Sign Up</a>
+        <a href="login.html" class="btn">Login</a>
+        <a href="sign-up.html" class="btn">Sign Up</a>
       </div>
     </nav>
+  </header>
 
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Whether you have a question, feedback, or partnership inquiry — fill out the form below.</p>
 
-    <main>
-        <h1>feel free to fill this form and reach me out</h1>
-      <div class="col-md-4">
-        <label for="" class="form-label"> name</label>
-        <input type="text" class="form-control" id="" required />
-      </div>
-      <br />
-      <div>
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-          required
-        />
-      </div>
-      <br />
-      <div>
-        <label for="phone nuber">Phone number</label>
-        <input
-          type="text"
-          id="phone nuber"
-          name="phone nuber"
-          placeholder="Enter your phonenumber"
-          required
-        />
-      </div>
-      <br />
-      <button class="submit button">submit</button>
-    </main>
-    <footer class="footer">
-        <div class="footer-media">
-          <a href="https://www.instagram.com/">Instagram</a>
-          <a href="#">X</a>
-          <a href="#">Telegram</a>
-          <a href="#">YouTube</a>
-          <a href="#">Discord</a>
-          <a href="#">Threads</a>
-        </div>
-        <div class="footer-links">
-          <a href="#">Contact Us</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
-      </footer>
-  </body>
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..." required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email..." required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Other Ways to Reach Us</h3>
+      <p>📧 Email: support@bookhaven.com</p>
+      <p>📞 Phone: +1 (555) 123-4567</p>
+      <p>📍 Address: Kitengela, Kajiado, KEN</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-media">
+      <a href="https://www.instagram.com/">Instagram</a>
+      <a href="#">X</a>
+      <a href="#">Telegram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Discord</a>
+      <a href="#">Threads</a>
+    </div>
+    <div class="footer-links">
+      <a href="#">Contact Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+  </footer>
+
+</body>
 </html>
